@@ -1,5 +1,31 @@
 README
 
-Explanation:
+"Network-entropy2" calculate the entropy of packets, segments or frames on the network.
+
+Parameters to send to the program will be:
+-The input: the file, the capture, the network interface on which is calculated the entropy.
+-The algorithm chosen
+-The output: file (json, xml), console
+
+For example :
+networkentropy -i capture.cap -a shannon -o result.txt
+
+The following algorithms will be Used:
+-Shannon.
+-Kolmogorov.
+-LZW (ZIF).
+-Maybe other algorithms if we have the time.
+
+It's implemented at the moment:
+-Shannon.
+-Calculation of entropy on a file.
+-Class diagram: an abstract class "AbstractAlgorithm","AbstractEntropyAlgorithm" inherits "AbstractAlgorithm".
+The entropy algorithms inherit "AbstractEntropyAlgorithm".
+
+They remain to do:
+-Kolmogorov.
+-Extraction of packets.
+-Live capture. 
+-If we have the time,Calculation of distances between results vectors and establishment of a database on statistics.
 
 
